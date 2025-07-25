@@ -42,22 +42,27 @@
 #move{
     text-align: center;
 }
-#six{
-    color: #f8f9fa;
-    font-size: 15px;
-    font-family: Arial,sans-serif;
-    padding: 16px 30px;
-    border-color:#f8f9fa;
-    background-color: rgba(0,0,0,0);
-    border-radius: 5px;
-    text-align: center;
-    margin-left: 530px;
-    padding-left: 70px;
+ #six {
+  color: #f8f9fa;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  padding: 16px 30px;
+  border: 1px solid #f8f9fa;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 2px;
+
+  text-align: center;
+
+  /* ✅ Make it a block element and center horizontally */
+  display: block;
+  margin: 20px auto; /* auto left/right + top/bottom spacing */
 }
-#six:hover{
-    background-color: white;
-    color: black;
+
+#six:hover {
+  background-color: white;
+  color: black;
 }
+
 #seven{
     font-size: 40px;
     font-family:  Times, serif;
