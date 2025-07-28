@@ -148,69 +148,58 @@
 #move{
     text-align: center;
 }
+/* Wrapper */
 #leftside {
-  display: inline-block;
+  /* Removed inline-block */
   border: solid;
   border-color: #6c757d;
   padding: 40px;
   border-radius: 5px;
-  margin: 70px 5px 70px 30px; /* even smaller right margin */
+  margin: 90px 30px;
 }
-
-
-.two2 {
+.two2{
     display: inline-block;
 }
-
-.labelname {
+.labelname{
     color: #6c757d;
     font-size: 18px;
     font-family: Arial, sans-serif;
-    margin: 0 0 8px;
+    margin: 0px 0px 8px;
     height: 33px;
+    
 }
-
-.firsttwo {
+.firsttwo{
     padding: 6px 12px;
     border: solid;
     border-radius: 5px;
     border-color: #6c757d;
     height: 40px;
-    margin: 12px 0;
-    border-radius: 5px;
-    padding: 6px 12px;
-    width: 90%;
-    max-width: 70%; /* Added for responsiveness */
-    box-sizing: border-box; /* Added for responsiveness */
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
-
-#emailInput {
+#emailInput{
     border: solid;
     border-radius: 5px;
     border-color: #6c757d;
     padding: 6px 12px;
-    width: 90%;
-    max-width: 70%; /* Added for responsiveness */
-    box-sizing: border-box; /* Added for responsiveness */
-    margin: 12px;
+    width: 100%;
+max-width: 434px;
+    margin: 12px 0px 12px 0px;
     height: 40px;
 }
-
-#writemessageinput {
+#writemessageinput{
     padding: 6px 12px;
     border: solid;
     border-radius: 5px;
     border-color: #6c757d;
-    width: 434px;
-    max-width: 90%; /* Added for responsiveness */
-    box-sizing: border-box; /* Added for responsiveness */
-    height: 190px;
-    margin: 12px 0;
+  width: 100%;
+max-width: 434px;
+    height: 208px;
+    margin: 12px 0px 12px 0px;
 }
-
-#btn {
+#btn{
     padding: 10px 30px;
-    width: 160px; /* ✅ updated width */
+    width: 160px;
     height: 48px;
     border: solid;
     border-color: #65c0ba;
@@ -218,209 +207,250 @@
     border-radius: 2px;
     background: transparent;
 }
-#btn:hover{
-    background-color: #65c0ba;
-    color: white;
+.two3{
+    display: inline-block;
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+  #leftside {
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  .two2,
+  .two3 {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .firsttwo {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #emailInput,
+  #writemessageinput {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
   #btn {
-    width: 30%;
-    height: auto; /* optional: remove fixed height for better wrapping */
-    padding: 12px 0; /* center the text nicely */
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
   }
 }
-.two3 {
-    display: inline-block;
-    margin-left: 75px;
+
+@media (max-width: 480px) {
+  #leftside {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .labelname {
+    font-size: 16px;
+  }
+
+  .firsttwo,
+  #emailInput,
+  #writemessageinput {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #writemessageinput {
+    height: 150px;
+  }
+
+  #btn {
+    font-size: 16px;
+    height: 44px;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  #leftside {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto; /* ✅ Center horizontally */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left; /* in case you want left-aligned labels/text */
+  }
+
+  .two2,
+  .two3 {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .firsttwo,
+  #emailInput,
+  #writemessageinput {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0 auto; /* ✅ Center button */
+    display: block;
+  }
+}
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  #leftside {
+    display: block; /* ✅ Change from inline-block */
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .firsttwo,
+  #emailInput,
+  #writemessageinput {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+/* Default: Laptop/Desktop */
 .headingspart {
-    color: #65c0ba;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
+  color: #65c0ba;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
 }
 
 .datapart {
-    font-size: 30px;
-    font-family: Times, serif;
-}
-
-/* ==== Responsive Styles ==== */
-
-/* Tablets (max-width: 991px) */
-@media (max-width: 991px) {
-    #leftside {
-        display: block;
-        width: 90%;
-        margin: 40px auto;
-        padding: 30px;
-    }
-
-    .two2 {
-        display: block;
-    }
-
-    .two3 {
-        display: block;
-        margin: 30px auto 0;
-    }
-}
-
-/* Mobiles (max-width: 600px) */
-@media (max-width: 600px) {
-    #leftside {
-        width: 85%;
-        padding: 20px;
-        margin: 20px auto;
-    }
-
-    #emailInput,#firsttwo,
-    #writemessageinput {
-        width: 100%;
-    }
-
-    #btn {
-        width: 100%;
-        height: auto;
-        padding: 12px 0;
-    }
-
-    .datapart {
-        font-size: 24px;
-    }
+  font-size: 30px;
+  font-family: Times, serif;
 }
 
 #rightside {
-    display: inline-block;
-    margin: 0px 30px 100px 100px; /* top right bottom left */
-    padding: 0px 30px 200px 30px; /* top right bottom left */
+  display: inline-block;
+  margin: 0px 30px 100px 100px;
+  padding: 0px 30px 200px 30px;
+  box-sizing: border-box;
+
 }
 
-/* Tablet screens (up to 991px) */
-@media (max-width: 991px) {
+/* ✅ Responsive for tablets & phones */
+@media (max-width: 768px) {
   #rightside {
-    display: block;             /* stack under #leftside */
-    width: 90%;                 /* take more width */
-    margin: 40px auto;          /* center horizontally */
-    padding: 0px 20px 100px 20px; /* reduce bottom padding */
-  }
-}
-
-/* Mobile screens (up to 600px) */
-@media (max-width: 600px) {
-  #rightside {
-    width: 95%;                 /* use nearly full screen */
-    margin: 20px auto;          /* less margin */
-    padding: 0px 15px 60px 15px;  /* smaller padding for mobile */
+    display: block;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
     text-align: center;
   }
+
+  .headingspart {
+    font-size: 16px;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .datapart {
+    font-size: 22px;
+    display: block;
+    margin: 10px 0 30px 0;
+  }
+}
+#contactcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
 }
 
-/* ORIGINAL stays the same */
-#twentytwo {
-  margin: 0px 27px;
-  padding: 0px 15px;
-  background-color: #fafafa;
+@media (max-width: 1024px) {
+  #contactcontainer {
+    display: block; /* stack on small screens */
+    padding: 20px;
+  }
 }
+
+#twentytwo {
+  padding: 40px 15px;
+  background-color: #fafafa;
+  text-align: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+}
+
 #twentyone {
   font-size: 70px;
   font-family: Times, serif;
-  margin: 0px 0px 30px;
+  margin-bottom: 30px;
   text-align: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  word-break: break-word;
 }
 
-.customer-img {
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
+.customer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
-
-
 
 .twentythree {
-  display: inline-block;
-  padding-left: 55px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 0 auto;
 }
 
+.Customertext {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  margin-top: 16px;
+  line-height: 28px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: left;
+}
 
-/* ======== Responsive: Tablets (≤991px) ======== */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   #twentyone {
-    font-size: 50px; /* reduce heading size */
+    font-size: 40px;
   }
 
-  #twentytwo {
-    margin: 0px 15px; /* reduce side margin */
-    padding: 0px 10px; /* tighten padding */
+  .Customertext {
+    font-size: 16px;
+    text-align: center;
   }
 
   .twentythree {
-    display: block; /* stack vertically */
-    padding-left: 30px; /* smaller indent */
-  }
-
-  .customer-img {
-    height: 80px;  /* slightly smaller image */
-    width: 80px;
-  }
-}
-
-/* ======== Responsive: Mobile (≤600px) ======== */
-@media (max-width: 600px) {
-  #twentyone {
-    font-size: 36px; /* more readable on phone */
-  }
-
-  #twentytwo {
-    margin: 0px 10px; /* minimal side margin */
-    padding: 0px 8px;
-  }
-
-  .twentythree {
-    padding-left: 15px; /* reduce indent more */
-  }
-
-  .customer-img {
-    height: 70px;
-    width: 70px;
-  }
-}
-#twentyone {
-  animation: bottomToTop 1s ease forwards;
-}
-
-.customer-img {
-  animation: bottomToTop 1s ease forwards;
-}
-
-.twentythree {
-  animation: bottomToTop 1s ease forwards;
-}
-#twentyone {
-  animation: bottomToTop 1s ease forwards;
-  animation-delay: 0.1s;
-}
-
-.customer-img {
-  animation: bottomToTop 1s ease forwards;
-  animation-delay: 0.3s;
-}
-
-.twentythree {
-  animation: bottomToTop 1s ease forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes bottomToTop {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    text-align: center;
   }
 }
 

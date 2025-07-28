@@ -149,13 +149,31 @@
     transform: translateY(0);
 }
 
-#thirteen {
+#thirteen{
     margin: 0px 27px;
     padding: 0px 15px;
+    background-color: #fafafa;
+} */
+ #scrollg {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-out;
+}
+
+#scrollg.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+#thirteen {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
     background-color: #fafafa;
     opacity: 0;
     transform: translateY(100px);
     transition: all 1s ease-out;
+    box-sizing: border-box;
 }
 
 #thirteen.show {
@@ -163,51 +181,35 @@
     transform: translateY(0);
 }
 
-#fourteen{
+#fourteen {
     font-size: 32px;
     font-family: Times, serif;
-    margin: 0px 0px 8px;
+    margin: 0 0 8px;
     text-align: center;
 }
+
 #fifteen {
     text-align: center;
     color: #6c757d;
-    font-size: 1.125rem; /* 18px = 1.125rem */
+    font-size: 1.125rem;
     font-family: Arial, sans-serif;
     line-height: 1.8;
-    
-    width: 100%;
-    max-width: 100%;
+    padding: 1rem;
     box-sizing: border-box;
-    padding: 1rem;
-    overflow-wrap: break-word;
-    word-break: break-word;
     white-space: normal;
-    display: block;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  #fifteen {
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #fifteen {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    padding: 0.8rem;
-  }
-}
-
-.headings{
+.headings {
     font-size: 28px;
     font-family: Times, serif;
-    margin: 0px 0px 8px;  
-    text-align: center; 
+    margin: 8px 0;
+    text-align: center;
 }
+
 .center-img{
  
     height: 70px;
@@ -600,67 +602,93 @@
 }
 
 
-#twentyfour{
+#twentyfour {
     font-family: Times, serif;
     margin: 0px 0px 8px;
     font-size: 32px;
     text-align: center;
-    font-weight: bold;    
+    font-weight: bold;
 }
+
 #twentyfive {
-    font-size: 1.25rem;           /* 20px = 1.25rem */
+    font-size: 1.25rem;
     font-family: Arial, sans-serif;
     color: #6c757d;
     margin: 0 0 1rem;
     text-align: center;
-    line-height: 2;               /* 2 × font-size = 40px */
-
+    line-height: 2;
     width: 100%;
-    max-width: 100%;
     box-sizing: border-box;
     padding: 1rem;
     overflow-wrap: break-word;
-    word-break: break-word;
     white-space: normal;
     display: block;
 }
 
 @media (max-width: 768px) {
-  #twentyfive {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #twentyfive {
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 0.8rem;
-  }
-}
-
-.ratingsadjust {
-    display: inline-block;
-    gap: 4px;
-    padding-left: 60px;
-}
-
-/* Tablet screens */
-@media (max-width: 992px) {
-    .ratingsadjust {
-        padding-left: 20px; /* reduce padding */
+    #twentyfive {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        padding: 1rem;
     }
 }
 
-/* Mobile screens */
+@media (max-width: 480px) {
+    #twentyfive {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0.8rem;
+    }
+}
+
+/* Responsive image container */
+.ratings-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Default for images */
+.ratingsadjust {
+    display: block;
+    text-align: center;
+}
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+    .ratingsadjust {
+        width: 45%;
+    }
+}
+
+/* Mobiles (≤ 600px) */
 @media (max-width: 600px) {
     .ratingsadjust {
-        display: block;        /* stack vertically */
-        padding-left: 0;       /* remove left padding */
-        text-align: center;    /* center the rating */
-        margin: 10px auto;
+        width: 90%;
+    }
+}
+
+/* Small mobiles (≤ 400px) */
+@media (max-width: 400px) {
+    .ratingsadjust {
+        width: 100%;
+    }
+}
+
+/* Large Desktops (≥ 1440px) */
+@media (min-width: 1440px) {
+    .ratingsadjust {
+        width: 22%;
+    }
+}
+
+/* Ultra-wide Screens (≥ 1920px) */
+@media (min-width: 1920px) {
+    .ratingsadjust {
+        width: 20%;
     }
 }
 
